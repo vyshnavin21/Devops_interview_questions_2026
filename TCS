@@ -1,0 +1,33 @@
+CloudWatch issue  
+Q: If pods are running fine in the background but not reflecting in CloudWatch, what could be the reason?  
+A: Misconfigured CloudWatch agent or missing IAM permissions.
+Scenario: A team deployed an app in EKS, pods were healthy, but CloudWatch showed no metrics. The issue was that the CloudWatch agent DaemonSet wasn’t installed in the cluster, so metrics weren’t being pushed.
+
+CrashLoopBackOff / ImagePullBackOff  
+Q: Define CrashLoopBackOff or ImagePullBackOff.  
+A:
+
+CrashLoopBackOff: Pod keeps restarting due to app errors.
+
+ImagePullBackOff: Kubernetes can’t fetch the image.
+Scenario: A developer pushed code with a missing environment variable. The pod started, crashed immediately, and went into CrashLoopBackOff. Fixing the variable resolved it.
+
+ReplicaSet scenario  
+Q: Define ReplicaSet — asked in a scenario.  
+A: Ensures a fixed number of pod replicas are running.
+Scenario: A ReplicaSet was configured for 3 pods. When one node failed, Kubernetes automatically scheduled a new pod on another node to maintain 3 replicas.
+
+GitOps version issue  
+Q: If we change versions in code but it’s not reflecting in a GitOps tool, what could be the cause?  
+A: GitOps operator not syncing, wrong branch, or pipeline failure.
+Scenario: A team updated the app version in values.yaml, but ArgoCD didn’t deploy it. The root cause was that the GitOps tool was pointing to the main branch, while changes were pushed to develop.
+
+Helm charts  
+Q: Asked about Helm charts.  
+A: Helm charts package Kubernetes resources for easy deployment.
+Scenario: Instead of manually applying multiple YAML files for a microservice, the team used a Helm chart with parameterized values, enabling quick rollbacks and upgrades.
+
+Grafana vs Prometheus  
+Q: What is the difference between Grafana and Prometheus?  
+A: Prometheus collects metrics; Grafana visualizes them.
+Scenario: Prometheus scraped CPU/memory metrics from pods. Grafana dashboards displayed these metrics with alerts configured for high CPU usage, giving real-time visibility.
