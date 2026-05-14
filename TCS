@@ -31,3 +31,5 @@ Grafana vs Prometheus
 Q: What is the difference between Grafana and Prometheus?  
 A: Prometheus collects metrics; Grafana visualizes them.
 Scenario: Prometheus scraped CPU/memory metrics from pods. Grafana dashboards displayed these metrics with alerts configured for high CPU usage, giving real-time visibility.
+
+what is an AI agent ,have you started working with AI agents in your project.
