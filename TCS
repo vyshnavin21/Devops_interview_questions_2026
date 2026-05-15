@@ -21,6 +21,10 @@ GitOps version issue
 Q: If we change versions in code but it’s not reflecting in a GitOps tool, what could be the cause?  
 A: GitOps operator not syncing, wrong branch, or pipeline failure.
 Scenario: A team updated the app version in values.yaml, but ArgoCD didn’t deploy it. The root cause was that the GitOps tool was pointing to the main branch, while changes were pushed to develop.
+If GitOps is not syncing, first I check whether the change is actually committed and pushed to the Git repository, since Git is the source of truth. 
+Then I verify if ArgoCD is watching the correct branch and path. Next, I check the application status to see if it is OutOfSync or Synced.
+If it’s OutOfSync but not applied, I check whether auto-sync is enabled or if there are sync errors. 
+Finally, I validate the image tag and pipeline execution to ensure the update is correctly propagated.
 
 Helm charts  
 Q: Asked about Helm charts.  
