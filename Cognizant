@@ -1,0 +1,18 @@
+introduce yourself and Day to Day activities
+explain me your CICD process
+How you build the docker file and the explain the process and how do you reduce the image size what would be the approaches you follow?
+explain the k8s architecture
+what is Daemon set and stateful set
+how do you integrate argocd with k8s and what are the commands can you explain?
+for example you have some issues with pods it could be crashloop,image pull back how do you check and the commands what you follow once you find the issue how do you troubleshoot it?
+explain about me the jenkins and what and all you know
+where do you store credentials in jenkins?
+what is terraform modules and explain about it
+how dockers container talk with each other ?
+what is docker volume and persistent volume and pvc
+which tools you guys are using for scanning the image?
+Differnce between deployment and pod
+what is CRD
+what is PDB(pod disruption budget)
+explain everything how u started n installed n integrated argocd with k8s
+
