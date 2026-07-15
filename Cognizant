@@ -15,4 +15,5 @@ Differnce between deployment and pod
 what is CRD
 what is PDB(pod disruption budget)
 explain everything how u started n installed n integrated argocd with k8s
-what is git fetch and git pull
+what is git fetch and git pull ,git stash
+
